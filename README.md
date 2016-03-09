@@ -1,6 +1,7 @@
 # wwconnect-2016-spark4everyone
 [WW]Connect 2016 workshop: Apache Spark For Everyone
 
+<h1>Installfest</h1>
 
 <h2>Apache Zeppelin</h2>
 
@@ -28,3 +29,15 @@
 <h4>Open in browser</h4>
 
 ```here: http://localhost:8080/```
+
+-----
+
+<h2>SparkR with RStudio</h2>
+
+* SparkR comes bundled with Spark after version 1.4. It comes with a REPL called sparkR. It can also be used within interactive notebook environments such as RStudio
+
+<h4>Download a prebuilt Spark release from here: http://spark.apache.org/downloads.html
+	For the purpose of this workshop select:
+	Spark release: 1.6.0
+	Package type: prebuilt for Hadoop 1.4 and later</h4>
+
