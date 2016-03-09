@@ -11,7 +11,7 @@
 
 * Learn more at https://zeppelin.incubator.apache.org/
 
-<h3>__Installing Zeppelin at the command line__</h3>
+<h3>Installing Zeppelin at the command line</h3>
 
 <h4>Clone the Repo</h4>
 
