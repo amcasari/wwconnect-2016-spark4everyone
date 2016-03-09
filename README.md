@@ -37,8 +37,4 @@
 * SparkR comes bundled with Spark after version 1.4. It comes with a REPL called sparkR. It can also be used within interactive notebook environments such as RStudio
 
 <h4>Download a prebuilt Spark release</h4>
-```here: http://spark.apache.org/downloads.html
-	For the purpose of this workshop select:
-	Spark release: 1.6.0
-	Package type: prebuilt for Hadoop 1.4 and later````
-
+```here: http://spark.apache.org/downloads.html```
