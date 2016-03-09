@@ -38,3 +38,9 @@
 
 <h4>Download a prebuilt Spark release</h4>
 ```here: http://spark.apache.org/downloads.html```
+
+<h4>You may need to install R</h4>
+get the package here: https://cran.rstudio.com/bin/macosx/
+or use a package manager like homebrew
+
+<h4>Download RStudio Desktop Version</h4>
