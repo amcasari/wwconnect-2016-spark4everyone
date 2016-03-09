@@ -4,12 +4,14 @@
 
 <h2>Apache Zeppelin</h2>
 
-Zeppelin is an interactive web-based notebook platform which is now an Apache Incubator Project. It has a multiple language backend including flavors of Spark, which means we don't have to install separate kernels, modules, plugins, or libraries to use it!
+Zeppelin is an interactive web-based notebook platform currently being incubated by Apache. 
 
-Currently Zeppelin supports Scala(with Apache Spark), Python(with Apache Spark), SparkSQL, Hive, Markdown and Shell.
+Zeppelin has multiple language backend including flavors of Spark, which means we don't have to install separate kernels, modules, plugins, or libraries to use it!
 
-<h3>Installing Zeppelin</h3>
-* clone the repo
+Zeppelin supports Scala(with Apache Spark), Python(with Apache Spark), SparkSQL, Hive, Markdown and Shell.
+
+<h3>Installing Zeppelin on the command line</h3>
+* Clone the Repo
 ```git clone https://github.com/apache/incubator-zeppelin```
 
 * Build/Install
