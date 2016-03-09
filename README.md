@@ -5,7 +5,7 @@
 <h2>Apache Zeppelin</h2>
 
 
-* Interactive web-based notebook platform currently being incubated by Apache. 
+* Interactive web-based notebook platform for data currently being incubated by Apache. 
 
 * Multiple language backend including flavors of Spark, which means we don't have to install separate kernels, modules, plugins, or libraries to use it! Supports Scala(with Apache Spark), Python(with Apache Spark), SparkSQL, Hive, Markdown and Shell.
 
@@ -27,4 +27,4 @@
 
 <h4>Open in browser</h4>
 
-```http://localhost:8080/```
+```try this: http://localhost:8080/```
