@@ -25,7 +25,7 @@
 
 ```bin/zeppelin-daemon.sh start```
 
-<h4>Open in browser<h4>
+<h4>Open in browser</h4>
 
 ```http://localhost:8080/```
 
