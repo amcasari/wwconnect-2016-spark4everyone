@@ -28,7 +28,7 @@
 
 <h4>Open in browser</h4>
 
-```here: http://localhost:8080/```
+http://localhost:8080/
 
 -----
 
@@ -37,10 +37,11 @@
 * SparkR comes bundled with Spark after version 1.4. It comes with a REPL called sparkR. It can also be used within interactive notebook environments such as RStudio
 
 <h4>Download a prebuilt Spark release</h4>
-```here: http://spark.apache.org/downloads.html```
+http://spark.apache.org/downloads.html
 
 <h4>You may need to install R</h4>
 get the package here: https://cran.rstudio.com/bin/macosx/
 or use a package manager like homebrew
 
 <h4>Download RStudio Desktop Version</h4>
+https://www.rstudio.com/products/rstudio/download/
