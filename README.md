@@ -15,19 +15,23 @@
 
 <h4>Clone the Repo</h4>
 
-```git clone https://github.com/apache/incubator-zeppelin```
+```git clone https://github.com/apache/incubator-zeppelin
+```
 
 <h4>Build/Install</h4>
 
-```mvn install -DXmx512m -DXX:MaxPermSize=256m -DskipTests -Dspark.version=1.6.0 -Dhadoop.version=2.4.0```
+```mvn install -DXmx512m -DXX:MaxPermSize=256m -DskipTests -Dspark.version=1.6.0 -Dhadoop.version=2.4.0
+```
 
 <h4>Start the Zep</h4>
 
-```bin/zeppelin-daemon.sh start```
+```bin/zeppelin-daemon.sh start
+```
 
 <h4>Open in browser</h4>
 
-```http://localhost:8080/```
+```http://localhost:8080/
+```
 
 
 
