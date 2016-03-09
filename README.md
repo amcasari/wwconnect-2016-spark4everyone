@@ -17,7 +17,7 @@
 
 ```git clone https://github.com/apache/incubator-zeppelin```
 
-<h4>Build/Install<h4>
+<h4>Build/Install</h4>
 
 ```mvn install -DXmx512m -DXX:MaxPermSize=256m -DskipTests -Dspark.version=1.6.0 -Dhadoop.version=2.4.0```
 
