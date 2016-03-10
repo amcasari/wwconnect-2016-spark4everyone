@@ -2,9 +2,10 @@
 [WW]Connect 2016 workshop: Apache Spark For Everyone
 
 <h1>Installfest</h1>
+----
+
 
 <h2>Apache Zeppelin</h2>
-
 
 * Interactive web-based notebook platform for data currently being incubated by Apache. 
 
