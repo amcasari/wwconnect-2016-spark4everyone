@@ -32,9 +32,9 @@ http://localhost:8080/
 
 -----
 
-<h2>SparkR with RStudio</h2>
+<h2>RStudio</h2>
 
-* SparkR comes bundled with Spark after version 1.4. It comes with a REPL called sparkR. It can also be used within interactive notebook environments such as RStudio
+* Spark includes SparkR after version 1.4(?), including a REPL called sparkR. It can also be used within interactive notebook environments -- such as RStudio
 
 <h4>Download a prebuilt Spark release</h4>
 http://spark.apache.org/downloads.html
