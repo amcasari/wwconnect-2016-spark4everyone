@@ -5,13 +5,13 @@
 <h1>Installfest</h1>
 ----
 
-<h2>Install Spark</h2>
+<h2>Spark</h2>
 
 <h4>Download a prebuilt Spark release</h4>
 http://spark.apache.org/downloads.html
 
 -----
-<h2>Install Interactive Notebooks</h2>
+<h2>INTERACTIVE NOTEBOOKS</h2>
 This section contains steps to install Apache Zeppelin, RStudio, Databricks Community Edition, and Jupyter.
 
 <h3>Apache Zeppelin</h3>
@@ -42,7 +42,7 @@ http://localhost:8080/
 
 -----
 
-<h3>SparkR with RStudio</h3>
+<h3>RStudio</h3>
 
 Spark includes SparkR after version 1.4, including a REPL called sparkR. It can also be used within interactive notebook environments -- such as RStudio
 
@@ -60,20 +60,21 @@ https://www.rstudio.com/products/rstudio/download/
 
 ----
 
-<h2>Databricks Community Edition</h2>
+<h2>DataBricks Community Edition</h2>
 
 A free version of databricks spark platform for learning. Waiting list for accounts. 
 
 
 ----
 
-<h1>LINKS</h1>
+<h1>QUICK LINKS</h1>
 
-Platforms and Downloads:
+Platforms:
 
 * zeppelin http://zeppelin.incubator.apache.org/
 * RStudio http://www.rstudio.com/products/rstudio/download/
 * Jupyter http://jupyter.org/
+* Databricks Community Edition: https://databricks.com/blog/2016/02/17/introducing-databricks-community-edition-apache-spark-for-all.html
 
 Spark Further:
 * Spark Programming Guide: http://spark.apache.org/docs/latest/programming-guide.html
