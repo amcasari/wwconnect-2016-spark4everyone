@@ -11,8 +11,8 @@
 http://spark.apache.org/downloads.html
 
 -----
-<h2>Install your Interactive Notebook</h2>
-----
+<h2>Install Interactive Notebooks</h2>
+This section contains steps to install Apache Zeppelin, RStudio, Databricks Community Edition, and Jupyter.
 
 <h3>Apache Zeppelin</h3>
 
@@ -63,6 +63,7 @@ https://www.rstudio.com/products/rstudio/download/
 <h2>Databricks Community Edition</h2>
 
 A free version of databricks spark platform for learning. Waiting list for accounts. 
+
 
 ----
 
