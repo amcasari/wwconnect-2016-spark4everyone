@@ -5,8 +5,16 @@
 <h1>Installfest</h1>
 ----
 
+<h2>Install Spark</h2>
 
-<h2>Apache Zeppelin</h2>
+<h4>Download a prebuilt Spark release</h4>
+http://spark.apache.org/downloads.html
+
+-----
+<h2>Install your Interactive Notebook</h2>
+----
+
+<h3>Apache Zeppelin</h3>
 
 * Interactive web-based notebook platform for data currently being incubated by Apache. 
 
@@ -14,7 +22,7 @@
 
 * Learn more at https://zeppelin.incubator.apache.org/
 
-<h3>Installing Zeppelin at the command line</h3>
+Installing Zeppelin at the command line:
 
 <h4>Clone the Repo</h4>
 
@@ -34,12 +42,10 @@ http://localhost:8080/
 
 -----
 
-<h2>RStudio</h2>
+<h3>SparkR with RStudio</h3>
 
-Spark includes SparkR after version 1.4(?), including a REPL called sparkR. It can also be used within interactive notebook environments -- such as RStudio
+Spark includes SparkR after version 1.4, including a REPL called sparkR. It can also be used within interactive notebook environments -- such as RStudio
 
-<h4>Download a prebuilt Spark release</h4>
-http://spark.apache.org/downloads.html
 
 <h4>You may need to install R</h4>
 For Mac:
@@ -56,8 +62,9 @@ https://www.rstudio.com/products/rstudio/download/
 
 <h2>Databricks Community Edition</h2>
 
-A free version of databricks spark platform for learning. 
+A free version of databricks spark platform for learning. Waiting list for accounts. 
 
+----
 
 <h1>LINKS</h1>
 
