@@ -91,7 +91,6 @@ Platforms:
 
 Spark Further:
 * Spark Programming Guide: http://spark.apache.org/docs/latest/programming-guide.html
-* StackOverflow: http://stackoverflow.com/questions/tagged/apache-spark
 * Get on mailing list and find out about conferences and events: http://spark.apache.org/community.html
 
 
