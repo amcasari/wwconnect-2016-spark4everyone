@@ -42,6 +42,18 @@ http://localhost:8080/
 
 -----
 
+<h3>Jupyter</h3>
+
+While Jupyter runs code in many different programming languages, Python is a prerequisite for installing Jupyter notebook.
+
+<h4>Download Jupyter as part of Anaconda Python distribution</h4>
+https://www.continuum.io/downloads
+
+<h4>Jupyter Project installs for most platforms:</h4>
+http://jupyter.readthedocs.org/en/latest/install.html
+
+----
+
 <h3>RStudio</h3>
 
 Spark includes SparkR after version 1.4, including a REPL called sparkR. It can also be used within interactive notebook environments -- such as RStudio
