@@ -62,8 +62,9 @@ https://www.rstudio.com/products/rstudio/download/
 
 <h2>DataBricks Community Edition</h2>
 
-A free version of databricks spark platform for learning. Waiting list for accounts. 
-
+A free version of databricks spark platform for learning. 
+There is a waiting list for accounts. 
+No local installation needed! Awesome!
 
 ----
 
