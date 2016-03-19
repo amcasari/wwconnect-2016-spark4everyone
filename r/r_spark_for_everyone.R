@@ -78,4 +78,4 @@ errors <- select(
 head(errors)
 
 
-#sparkR.stop()
+sparkR.stop()
