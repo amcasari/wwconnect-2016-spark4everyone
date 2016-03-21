@@ -1,4 +1,4 @@
-// Databricks notebook source exported at Mon, 21 Mar 2016 17:30:23 UTC
+// Databricks notebook source exported at Mon, 21 Mar 2016 17:44:53 UTC
 // MAGIC %md 
 // MAGIC <h1> Spark in scala For Everyone</h1>
 
@@ -86,11 +86,18 @@ parsedBikeRDD.count
 
 // COMMAND ----------
 
+//cache() is a transformation, our RDD wont be cached until it is materialized by the next action. 
 parsedBikeRDD.cache()
 
 // COMMAND ----------
 
+//now we see that the DAG includes RDDs in memory
 parsedBikeRDD.toDebugString
+
+// COMMAND ----------
+
+//now when we do the count action, we are counting the persisted RDD and it takes less time.
+parsedBikeRDD.count
 
 // COMMAND ----------
 
@@ -183,7 +190,12 @@ val kvpair = parsedBikeRDD.map(line=>(line.season, (line.temp, 1)))
 
 // COMMAND ----------
 
-//  reducebyKey  to get  the sum of temps  and count sum. Transformations that may trigger a stage boundary typically accept a numPartitions argument 
+// MAGIC %md <h4> reducebyKey(), unlike reduce(), is a transformation. There may be a very large number of keys, and you would not want to return all of those to your driver automatically.</h4>
+// MAGIC 
+// MAGIC * Transformations which may trigger a stage boundary typically accept a numPartitions argument
+
+// COMMAND ----------
+
 val totalcounts = kvpair.reduceByKey((x,y) => (x._1 + y._1, x._2 + y._2),2)  
 
 // COMMAND ----------
