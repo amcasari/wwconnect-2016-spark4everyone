@@ -1,4 +1,4 @@
-// Databricks notebook source exported at Sat, 19 Mar 2016 07:15:45 UTC
+// Databricks notebook source exported at Mon, 21 Mar 2016 17:30:23 UTC
 // MAGIC %md 
 // MAGIC <h1> Spark in scala For Everyone</h1>
 
@@ -63,6 +63,10 @@ def parse(line: String) = {
  val counts = pieces(16).toInt
  BikeData(date, season, temp, casual, registered, counts)
 }
+
+// COMMAND ----------
+
+// MAGIC %md <h4> When we use a method in a spark operation (like map), that method is packaged and sent out to all the executors, including any objects which it requires.</h4>
 
 // COMMAND ----------
 
@@ -174,12 +178,6 @@ seasonalCountsTotals.collect()
 
 // COMMAND ----------
 
-// MAGIC %md transformations:
-// MAGIC * map()
-// MAGIC * reduceByKey()
-
-// COMMAND ----------
-
 //  create key value pairs 
 val kvpair = parsedBikeRDD.map(line=>(line.season, (line.temp, 1)))
 
@@ -206,7 +204,7 @@ avgs.collect
 
 // COMMAND ----------
 
-// MAGIC %md <h4>Read the data in as a DataFrame</h4>
+// MAGIC %md <h4>Alternately to working wih <K,V> pairs, we can read the csv directly into a SparkSQL DataFrame</h4>
 
 // COMMAND ----------
 
@@ -217,12 +215,24 @@ val bikeDF = sqlContext.read.format("com.databricks.spark.csv")
 
 // COMMAND ----------
 
+// MAGIC %md <h4> Databricks Cloud has some extra graphical features which are specific to it's notebooks, such as display() for Spark DataFrames.</h4>
+
+// COMMAND ----------
+
 display(bikeDF)
+
+// COMMAND ----------
+
+// MAGIC %md <h4> One of the strengths of DataFrames is the ability to register them as tables which are available to any application using the same sqlContext. You can run sql queries on them. </h>
 
 // COMMAND ----------
 
 bikeDF.registerTempTable("bikes")
 val holidays = sqlContext.sql("SELECT dteday, season,temp,casual,registered,cnt FROM bikes WHERE holiday LIKE '1'")
+
+// COMMAND ----------
+
+// MAGIC %md <h4> When we look at the same bar plot of just the holiday rentals, the ratio of casual to registered bike rentals appears generally larger.</h4>
 
 // COMMAND ----------
 
