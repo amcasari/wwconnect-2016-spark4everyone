@@ -1,3 +1,5 @@
+//we need to execute one extra cell in Zeppelin as the very first cell to the interpreter
+
 %dep
 z.reset()
 z.addRepo("Spark Packages Repo").url("http://dl.bintray.com/spark-packages/maven")
