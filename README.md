@@ -60,16 +60,12 @@ https://www.continuum.io/downloads
 <h4>Jupyter Project installs for most platforms:</h4>
 http://jupyter.readthedocs.org/en/latest/install.html
 
-You can also get jupyter with the anaconda tool 'conda'
+<h4>You can also get jupyter with the anaconda tool 'conda', or if you dont have anaconda, with pip</h4>
 
-```conda install jupyter```
-
-or if you don't have anaconda, you can use pip. eg:
-
-```pip3 install jupyter``` 
-or
-```pip install jupyter``` 
-
+<pre>conda install jupyter
+pip3 install jupyter
+pip install jupyter
+</pre>
 
 <h4>Now you get to set up jupyter to run with a pyspark kernel. Here is one way to do it, this example is with Jupyter 4.1.0, spark-1.6.1-bin-hadoop2.6</h4>
 1. Create a profile 
