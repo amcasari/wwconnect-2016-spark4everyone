@@ -75,7 +75,7 @@ pip install jupyter
 ...<pre>
 c.NotebookApp.ip = '*'
 c.NotebookApp.open_browser = False
-c.NotebookApp.port = 8880 # or whatever you want; be aware of conflicts with CDH
+c.NotebookApp.port = 8880 # or whatever you want; be aware of conflicts
 </pre>
 
 3. Now creat a file ~/.ipython/profile_pyspark/startup/00-pyspark-setup.py and write this in. Note that the py4j file will be whichever specific one you fine in SPARK_HOME/python/lib :
