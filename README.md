@@ -90,7 +90,7 @@ sys.path.insert(0, os.path.join(spark_home, 'python'))
 execfile(os.path.join(spark_home, 'python/pyspark/shell.py'))
 </pre>
 
-4. Now make sure you have some environmental variables set, either in your current shell, or in a sources profile like .bash-profile
+4. Now make sure you have some environmental variables set, either in your current shell, or in a sources profile like .bash-profile. For the PYSPARK_SUBMIT_ARGS var, you put whatever you would normally [submit with your application or shell]("http://spark.apache.org/docs/latest/submitting-applications.html")
 ...<pre>
 export SPARK_HOME='/path/to/spark'
 export PYSPARK_SUBMIT_ARGS='--master local[*]'
