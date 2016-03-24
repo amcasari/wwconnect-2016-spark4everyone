@@ -40,6 +40,14 @@ Installing Zeppelin at the command line:
 
 http://localhost:8080/
 
+<h4>For now, need to run a dependency cell as the very first cell, if you want access to spark-csv package</h4>
+<pre>
+%dep
+z.reset()
+z.addRepo("Spark Packages Repo").url("http://dl.bintray.com/spark-packages/maven")
+z.load("com.databricks:spark-csv_2.11:1.4.0")
+</pre>
+
 -----
 
 <h3>Jupyter</h3>
@@ -52,7 +60,51 @@ https://www.continuum.io/downloads
 <h4>Jupyter Project installs for most platforms:</h4>
 http://jupyter.readthedocs.org/en/latest/install.html
 
-----
+You can also get jupyter with the anaconda tool 'conda'
+
+```conda install jupyter```
+
+or if you don't have anaconda, you can use pip. eg:
+
+```pip3 install jupyter``` 
+or
+```pip install jupyter``` 
+
+
+<h4>Now you get to set up jupyter to run with a pyspark kernel. Here is one way to do it, this example is with Jupyter 4.1.0, spark-1.6.1-bin-hadoop2.6</h4>
+1. Create a profile 
+...<pre>ipython profile create pyspark</pre>
+
+2. cd into ~/.ipython/profile_pyspark and edit the file ipython_config.py
+...<pre>
+c.NotebookApp.ip = '*'
+c.NotebookApp.open_browser = False
+c.NotebookApp.port = 8880 # or whatever you want; be aware of conflicts with CDH
+</pre>
+
+3. Now creat a file ~/.ipython/profile_pyspark/startup/00-pyspark-setup.py and write this in. Note that the py4j file will be whichever specific one you fine in SPARK_HOME/python/lib :
+...<pre>
+import os
+import sys
+spark_home = os.environ.get('SPARK_HOME', None)
+  if not spark_home:
+      raise ValueError('SPARK_HOME environment variable is not set')
+sys.path.insert(0, os.path.join(spark_home, 'python'))
+  sys.path.insert(0, os.path.join(spark_home, 'python/lib/py4j-0.9-src.zip'))
+execfile(os.path.join(spark_home, 'python/pyspark/shell.py'))
+</pre>
+
+4. Now make sure you have some environmental variables set, either in your current shell, or in a sources profile like .bash-profile
+...<pre>
+export SPARK_HOME='/path/to/spark'
+export PYSPARK_SUBMIT_ARGS='--master local[*]'
+</pre>
+
+5. Now you are ready to launch jupyter with your pyspark profile
+...<pre>jupyter notebook --profile=pyspark</pre>
+
+rather than configure jupyter locally with the above steps, you may also choose to run a jupyter notebook with pyspark kernel by using a [docker container](https://wegetsignal.wordpress.com/2016/03/23/jupyter-spark-docker/) 
+_______
 
 <h3>RStudio</h3>
 
