@@ -67,39 +67,6 @@ pip3 install jupyter
 pip install jupyter
 </pre>
 
-<h4>Now you get to set up jupyter to run with a pyspark kernel. Here is one way to do it, this example is with Jupyter 4.1.0, spark-1.6.1-bin-hadoop2.6</h4>
-1. Create a profile 
-...<pre>ipython profile create pyspark</pre>
-
-2. cd into ~/.ipython/profile_pyspark and edit the file ipython_config.py
-...<pre>
-c.NotebookApp.ip = '*'
-c.NotebookApp.open_browser = False
-c.NotebookApp.port = 8880 # or whatever you want; be aware of conflicts
-</pre>
-
-3. Now create a file ~/.ipython/profile_pyspark/startup/00-pyspark-setup.py and write this in. Note that the py4j file will be whichever specific one is in SPARK_HOME/python/lib :
-...<pre>
-import os
-import sys
-spark_home = os.environ.get('SPARK_HOME', None)
-  if not spark_home:
-      raise ValueError('SPARK_HOME environment variable is not set')
-sys.path.insert(0, os.path.join(spark_home, 'python'))
-  sys.path.insert(0, os.path.join(spark_home, 'python/lib/py4j-0.9-src.zip'))
-execfile(os.path.join(spark_home, 'python/pyspark/shell.py'))
-</pre>
-
-4. Now make sure you have some environmental variables set, either in your current shell, or in a sources profile like .bash-profile. For the PYSPARK_SUBMIT_ARGS var, you put whatever you would normally [submit with your application or shell](http://spark.apache.org/docs/latest/submitting-applications.html)
-...<pre>
-export SPARK_HOME='/path/to/spark'
-export PYSPARK_SUBMIT_ARGS='--master local[*]'
-</pre>
-
-5. Now you are ready to launch jupyter with your pyspark profile
-...<pre>jupyter notebook --profile=pyspark</pre>
-
-rather than configure jupyter locally with the above steps, you may also choose to run a jupyter notebook with pyspark kernel by using a [docker container](https://wegetsignal.wordpress.com/2016/03/23/jupyter-spark-docker/) 
 _______
 
 <h3>RStudio</h3>
